@@ -9,18 +9,18 @@ export default class Palette extends Component {
     this.state = { level: 500, format: 'hex' };
   }
 
-  changeLevel = level => {
+  changeLevel = (level) => {
     this.setState({ level });
   };
 
-  changeFormat = value => {
+  changeFormat = (value) => {
     this.setState({ format: value });
   };
 
   render() {
     const { level, format } = this.state;
     const { colors, emoji, paletteName, id } = this.props.palette;
-    const colorBoxes = colors[level].map(color => (
+    const colorBoxes = colors[level].map((color) => (
       <ColorBox
         background={color[format]}
         name={color.name}
@@ -28,6 +28,7 @@ export default class Palette extends Component {
         colors={color.colors}
         key={color.id}
         paletteId={id}
+        showLink={true}
       />
     ));
     return (
