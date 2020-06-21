@@ -29,11 +29,11 @@ export default class Palette extends Component {
         colors={color.colors}
         key={color.id}
         paletteId={id}
-        showLink={true}
+        showingFullPalette
       />
     ));
     return (
-      <div className='Palette'>
+      <div className=' Palette'>
         <Navbar
           level={level}
           changeLevel={this.changeLevel}
