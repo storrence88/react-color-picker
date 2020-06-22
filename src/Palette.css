@@ -3,11 +3,11 @@
   overflow: hidden;
 } */
 
-.Palette-colors {
+/* .Palette-colors {
   height: 90%;
-}
+} */
 
-.Palette-footer {
+/* .Palette-footer {
   background-color: white;
   height: 4vh;
   display: flex;
@@ -20,4 +20,4 @@
 .emoji {
   font-size: 1.33rem;
   margin: .5rem;
-}
+} */
