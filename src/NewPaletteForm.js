@@ -146,6 +146,9 @@ class NewPaletteForm extends Component {
             <Typography variant='h6' color='inherit' noWrap>
               Persistent drawer
             </Typography>
+            <Button variant='contained' color='secondary'>
+              Save Palette
+            </Button>
           </Toolbar>
         </AppBar>
         <Drawer
