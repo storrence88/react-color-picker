@@ -78,6 +78,9 @@ const styles = (theme) => ({
 });
 
 class NewPaletteForm extends Component {
+  static defaultProps = {
+    maxColors: 20
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -158,6 +161,14 @@ class NewPaletteForm extends Component {
     this.setState({ colors: [] });
   };
 
+  addRandomColor = () => {
+    // Pick random color from existing palettes
+    const allColors = this.props.palettes.map((palette) => palette.colors).flat();
+    let rand = Math.floor(Math.random() * allColors.length);
+    const randomColor = allColors[rand];
+    this.setState({ colors: [...this.state.colors, randomColor] });
+  };
+
   render() {
     const { classes, theme } = this.props;
     const { open } = this.state;
@@ -219,7 +230,7 @@ class NewPaletteForm extends Component {
             <Button variant='contained' color='secondary' onClick={this.clearColors}>
               Clear Palette
             </Button>
-            <Button variant='contained' color='primary'>
+            <Button variant='contained' color='primary' onClick={this.addRandomColor}>
               Random Color
             </Button>
           </div>
