@@ -84,7 +84,7 @@ class NewPaletteForm extends Component {
       open: true,
       currentColor: 'teal',
       newColorName: '',
-      colors: [{ color: 'blue', name: 'blue' }],
+      colors: this.props.palettes[0].colors,
       newPaletteName: ''
     };
   }
@@ -154,6 +154,10 @@ class NewPaletteForm extends Component {
     }));
   };
 
+  clearColors = () => {
+    this.setState({ colors: [] });
+  };
+
   render() {
     const { classes, theme } = this.props;
     const { open } = this.state;
@@ -212,7 +216,7 @@ class NewPaletteForm extends Component {
           <Divider />
           <Typography variant='h4'>Design Your Palette</Typography>
           <div>
-            <Button variant='contained' color='secondary'>
+            <Button variant='contained' color='secondary' onClick={this.clearColors}>
               Clear Palette
             </Button>
             <Button variant='contained' color='primary'>
