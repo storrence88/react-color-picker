@@ -40,7 +40,7 @@ class PaletteFormNav extends Component {
 
     return (
       <div className={classes.root}>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <AppBar
           position='fixed'
           color='default'
