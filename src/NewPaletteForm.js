@@ -115,6 +115,9 @@ class NewPaletteForm extends Component {
             <Typography variant='h4' gutterBottom>
               Design Your Palette
             </Typography>
+            <Typography variant='h6' gutterBottom>
+              Click and drag to reorder color boxes!
+            </Typography>
             <div className={classes.buttons}>
               <Button
                 className={classes.button}

@@ -8,7 +8,7 @@ const styles = {
     margin: '0 auto',
     display: 'inline-block',
     position: 'relative',
-    cursor: 'pointer',
+    cursor: 'move',
     marginBottom: '-3.5px',
     '&:hover svg': {
       color: 'white',
@@ -42,7 +42,8 @@ const styles = {
     justifyContent: 'space-between'
   },
   deleteIcon: {
-    transition: 'all 0.3s ease-in-out'
+    transition: 'all 0.3s ease-in-out',
+    cursor: 'pointer'
   }
 };
 
