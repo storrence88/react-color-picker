@@ -28,7 +28,7 @@ const styles = {
   },
   boxContent: {
     position: 'absolute',
-    width: '100%',
+    width: '94%',
     left: 0,
     bottom: 0,
     padding: '10px',
